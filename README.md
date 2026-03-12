@@ -1,261 +1,323 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portas Abertas - ICCM</title>
-    <style>
-        :root {
-            --gold: #d4af37;
-            --gold-dark: #b08c24;
-            --gray: #707070;
-            --light-gray: #f5f5f5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portas Abertas - ICCM</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+:root {
+    --gold: #d4af37;
+    --gold-dark: #b08c24;
+    --gray: #707070;
+    --light-gray: #f5f5f5;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: radial-gradient(circle at top, var(--gold) 0%, #ffffff 40%, #ffffff 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            color: var(--gray);
-        }
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .container {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            width: 100%;
-            max-width: 420px;
-            padding: 22px 18px 20px;
-            border: 1px solid #e2e2e2;
-        }
+body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:radial-gradient(circle at top,var(--gold) 0%,#ffffff 40%,#ffffff 100%);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+    color:var(--gray);
+}
 
-        .header {
-            text-align: center;
-            margin-bottom: 18px;
-        }
+.container{
+    background:#ffffff;
+    border-radius:16px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    width:100%;
+    max-width:420px;
+    padding:22px 18px 20px;
+    border:1px solid #e2e2e2;
+}
 
-        .header h1 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--gold-dark);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
+.header{
+    text-align:center;
+    margin-bottom:18px;
+}
 
-        .header h2 {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--gray);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
+.header h1{
+    font-size:20px;
+    font-weight:700;
+    color:var(--gold-dark);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:4px;
+}
 
-        .brand-line {
-            height: 3px;
-            width: 80px;
-            margin: 10px auto 0;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--gold), var(--gray));
-        }
+.header h2{
+    font-size:13px;
+    font-weight:500;
+    color:var(--gray);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
 
-        .form-group {
-            margin-bottom: 14px;
-        }
+.brand-line{
+    height:3px;
+    width:80px;
+    margin:10px auto 0;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--gold),var(--gray));
+}
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #444444;
-        }
+.form-group{
+    margin-bottom:14px;
+}
 
-        input[type="text"],
-        input[type="tel"] {
-            width: 100%;
-            padding: 10px 11px;
-            border-radius: 6px;
-            border: 1px solid #cfcfcf;
-            background-color: var(--light-gray);
-            font-size: 15px;
-            font-family: inherit;
-        }
+label{
+    display:block;
+    margin-bottom:5px;
+    font-size:13px;
+    font-weight:600;
+    color:#444444;
+}
 
-        .options-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 18px;
-            margin-top: 4px;
-        }
+input[type="text"],
+input[type="tel"]{
+    width:100%;
+    padding:10px 11px;
+    border-radius:6px;
+    border:1px solid #cfcfcf;
+    background-color:var(--light-gray);
+    font-size:15px;
+}
 
-        .option-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-        }
+.options-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px 18px;
+    margin-top:4px;
+}
 
-        input[type="radio"] {
-            width: 16px;
-            height: 16px;
-            accent-color: var(--gold-dark);
-        }
+.option-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:13px;
+}
 
-        button {
-            width: 100%;
-            padding: 11px;
-            margin-top: 6px;
-            border-radius: 999px;
-            border: none;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 45%, #666666 100%);
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+input[type="radio"]{
+    width:16px;
+    height:16px;
+    accent-color:var(--gold-dark);
+}
 
-        .success-message,
-        .error-message {
-            display: none;
-            padding: 9px 10px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+button{
+    width:100%;
+    padding:11px;
+    margin-top:6px;
+    border-radius:999px;
+    border:none;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 45%,#666666 100%);
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
 
-        .success-message {
-            background: #2e7d32;
-            color: #ffffff;
-        }
+.success-message,
+.error-message{
+    display:none;
+    padding:9px 10px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:10px;
+}
 
-        .error-message {
-            background: #c62828;
-            color: #ffffff;
-        }
-    </style>
+.success-message{
+    background:#2e7d32;
+    color:#ffffff;
+}
+
+.error-message{
+    background:#c62828;
+    color:#ffffff;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>Portas Abertas</h1>
-        <h2>ICCM</h2>
-        <div class="brand-line"></div>
-    </div>
 
-    <div class="success-message" id="successMessage">
-        ✓ Cadastro registrado com sucesso.
-    </div>
+<div class="header">
+<h1>Portas Abertas</h1>
+<h2>ICCM</h2>
+<div class="brand-line"></div>
+</div>
 
-    <div class="error-message" id="errorMessage">
-        ✗ Preencha todos os campos.
-    </div>
+<div class="success-message" id="successMessage">
+✓ Cadastro registrado com sucesso.
+</div>
 
-    <form id="visitantesForm">
-        <div class="form-group">
-            <label>Nome: *</label>
-            <input type="text" id="nome" required>
-        </div>
+<div class="error-message" id="errorMessage">
+✗ Preencha todos os campos.
+</div>
 
-        <div class="form-group">
-            <label>Telefone: *</label>
-            <input type="tel" id="telefone" required>
-        </div>
+<form id="visitantesForm">
 
-        <div class="form-group">
-            <label>Primeira vez que conhece nossa igreja? *</label>
-            <div class="options-row">
-                <label class="option-item">
-                    <input type="radio" name="primeiraVez" value="SIM" required> Sim
-                </label>
-                <label class="option-item">
-                    <input type="radio" name="primeiraVez" value="NÃO"> Não
-                </label>
-            </div>
-        </div>
+<div class="form-group">
+<label>Nome: *</label>
+<input type="text" id="nome" required>
+</div>
 
-        <div class="form-group">
-            <label>Como encontrou a igreja? *</label>
-            <div class="options-row">
-                <label class="option-item">
-                    <input type="radio" name="comoEncontrou" value="Amigo ou Familiar" required> Amigo
-                </label>
-                <label class="option-item">
-                    <input type="radio" name="comoEncontrou" value="Rede Social"> Rede social
-                </label>
-                <label class="option-item">
-                    <input type="radio" name="comoEncontrou" value="Passava por aqui"> Passava em frente
-                </label>
-            </div>
-        </div>
+<div class="form-group">
+<label>Telefone: *</label>
+<input type="tel" id="telefone" required>
+</div>
 
-        <button type="submit">Registrar visitante</button>
-    </form>
+<div class="form-group">
+<label>Primeira vez que conhece nossa igreja? *</label>
+<div class="options-row">
+<label class="option-item">
+<input type="radio" name="primeiraVez" value="SIM" required> Sim
+</label>
+
+<label class="option-item">
+<input type="radio" name="primeiraVez" value="NÃO"> Não
+</label>
+</div>
+</div>
+
+<div class="form-group">
+<label>Como encontrou a igreja? *</label>
+<div class="options-row">
+
+<label class="option-item">
+<input type="radio" name="comoEncontrou" value="Amigo ou Familiar" required> Amigo
+</label>
+
+<label class="option-item">
+<input type="radio" name="comoEncontrou" value="Rede Social"> Rede social
+</label>
+
+<label class="option-item">
+<input type="radio" name="comoEncontrou" value="Passava por aqui"> Passava em frente
+</label>
+
+</div>
+</div>
+
+<div class="form-group">
+<label>Aceitou a Jesus na casa de Maquir? *</label>
+<div class="options-row">
+
+<label class="option-item">
+<input type="radio" name="aceitouJesus" value="SIM" required> Sim
+</label>
+
+<label class="option-item">
+<input type="radio" name="aceitouJesus" value="NÃO"> Não
+</label>
+
+</div>
+</div>
+
+<div class="form-group">
+<label>Reconciliou na casa de Maquir? *</label>
+<div class="options-row">
+
+<label class="option-item">
+<input type="radio" name="reconciliou" value="SIM" required> Sim
+</label>
+
+<label class="option-item">
+<input type="radio" name="reconciliou" value="NÃO"> Não
+</label>
+
+</div>
+</div>
+
+<button type="submit">Registrar visitante</button>
+
+</form>
 </div>
 
 <script>
-    const GOOGLE_FORM_URL =
-        "https://docs.google.com/forms/d/e/1FAIpQLSeFoRgm-NdxRF-0i0elTtckhkCWeA_PK8rq-seUTgN-tLthNw/formResponse";
 
-    const FIELD_MAPPING = {
-        nome: "entry.260911984",
-        telefone: "entry.1742852054",
-        primeiraVez: "entry.1777783246",
-        comoEncontrou: "entry.406782914"
-    };
+const GOOGLE_FORM_URL =
+"https://docs.google.com/forms/d/e/1FAIpQLSeFoRgm-NdxRF-0i0elTtckhkCWeA_PK8rq-seUTgN-tLthNw/formResponse";
 
-    const form = document.getElementById("visitantesForm");
-    const successBox = document.getElementById("successMessage");
-    const errorBox = document.getElementById("errorMessage");
+const FIELD_MAPPING = {
+nome:"entry.260911984",
+telefone:"entry.1742852054",
+primeiraVez:"entry.1777783246",
+comoEncontrou:"entry.406782914",
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+aceitouJesus:"entry.XXXXXXXX",
+reconciliou:"entry.YYYYYYYY"
+};
 
-        const nome = document.getElementById("nome").value.trim();
-        const telefone = document.getElementById("telefone").value.trim();
-        const primeiraVez = document.querySelector('input[name="primeiraVez"]:checked');
-        const comoEncontrou = document.querySelector('input[name="comoEncontrou"]:checked');
+const form=document.getElementById("visitantesForm");
+const successBox=document.getElementById("successMessage");
+const errorBox=document.getElementById("errorMessage");
 
-        if (!nome || !telefone || !primeiraVez || !comoEncontrou) {
-            errorBox.style.display = "block";
-            successBox.style.display = "none";
-            return;
-        }
+form.addEventListener("submit",function(e){
 
-        const formData = new FormData();
-        formData.append(FIELD_MAPPING.nome, nome);
-        formData.append(FIELD_MAPPING.telefone, telefone);
-        formData.append(FIELD_MAPPING.primeiraVez, primeiraVez.value);
-        formData.append(FIELD_MAPPING.comoEncontrou, comoEncontrou.value);
+e.preventDefault();
 
-        fetch(GOOGLE_FORM_URL, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-        }).then(() => {
-            errorBox.style.display = "none";
-            successBox.style.display = "block";
-            form.reset();
+const nome=document.getElementById("nome").value.trim();
+const telefone=document.getElementById("telefone").value.trim();
 
-            setTimeout(() => {
-                successBox.style.display = "none";
-            }, 2500);
-        });
-    });
+const primeiraVez=document.querySelector('input[name="primeiraVez"]:checked');
+const comoEncontrou=document.querySelector('input[name="comoEncontrou"]:checked');
+
+const aceitouJesus=document.querySelector('input[name="aceitouJesus"]:checked');
+const reconciliou=document.querySelector('input[name="reconciliou"]:checked');
+
+if(!nome || !telefone || !primeiraVez || !comoEncontrou || !aceitouJesus || !reconciliou){
+
+errorBox.style.display="block";
+successBox.style.display="none";
+return;
+
+}
+
+const formData=new FormData();
+
+formData.append(FIELD_MAPPING.nome,nome);
+formData.append(FIELD_MAPPING.telefone,telefone);
+formData.append(FIELD_MAPPING.primeiraVez,primeiraVez.value);
+formData.append(FIELD_MAPPING.comoEncontrou,comoEncontrou.value);
+
+formData.append(FIELD_MAPPING.aceitouJesus,aceitouJesus.value);
+formData.append(FIELD_MAPPING.reconciliou,reconciliou.value);
+
+fetch(GOOGLE_FORM_URL,{
+method:"POST",
+body:formData,
+mode:"no-cors"
+})
+
+.then(()=>{
+
+errorBox.style.display="none";
+successBox.style.display="block";
+form.reset();
+
+setTimeout(()=>{
+successBox.style.display="none";
+},2500);
+
+});
+
+});
+
 </script>
 
 </body>
 </html>
+
