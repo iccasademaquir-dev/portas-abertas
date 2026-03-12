@@ -257,8 +257,8 @@ telefone:"entry.1742852054",
 primeiraVez:"entry.1777783246",
 comoEncontrou:"entry.406782914",
 
-aceitouJesus:"entry.XXXXXXXX",
-reconciliou:"entry.YYYYYYYY"
+aceitouJesus:"entry.874352853",
+reconciliou:"entry.2118526464"
 };
 
 const form=document.getElementById("visitantesForm");
