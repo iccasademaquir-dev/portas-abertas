@@ -212,7 +212,7 @@ button{
 </div>
 
 <div class="form-group">
-<label>Aceitou a Jesus na casa de Maquir? *</label>
+<label>Aceitou a Jesus na Casa de Maquir? *</label>
 <div class="options-row">
 
 <label class="option-item">
@@ -227,7 +227,7 @@ button{
 </div>
 
 <div class="form-group">
-<label>Reconciliou na casa de Maquir? *</label>
+<label>Reconciliou na Casa de Maquir? *</label>
 <div class="options-row">
 
 <label class="option-item">
